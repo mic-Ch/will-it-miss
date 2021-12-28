@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "A website to learn how to make a toolchain",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel src/index.html",
-    "build": "npx parcel build src/index.html"
+    "test": "node tests/nasa-feed.test.js",
+    "build": "npm run test && npx parcel build src/index.html"
   },
   "keywords": [],
   "author": "Michael Chang",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.24.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.5.0",
     "eslint-plugin-react": "^7.28.0",
